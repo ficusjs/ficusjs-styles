@@ -1,0 +1,22 @@
+{
+	"name": "ficusjs-styles",
+	"version": "0.1.0",
+	"description": "Global styles for FicusJS",
+	"scripts": {
+		"build": "run-p build:*",
+		"build:sass": "node-sass --output-style compressed --output ./dist/css ./src/sass",
+		"dev": "run-p watch:*",
+		"watch:sass": "node-sass-chokidar ./src/sass --watch --recursive --output-style compressed --output ./dist/css",
+		"lint:sass": "stylelint \"src/sass/**/*.scss\""
+	},
+	"author": "James Cavanagh",
+	"license": "ISC",
+	"devDependencies": {
+		"http-server": "0.12.3",
+		"node-sass": "4.14.1",
+		"node-sass-chokidar": "1.5.0",
+		"npm-run-all": "4.1.5",
+		"stylelint": "13.6.1",
+		"stylelint-config-standard": "20.0.0"
+	}
+}

@@ -1,0 +1,43 @@
+// colors
+
+
+$white: #fff !default;
+$gray-1: #f6f6f6 !default;
+$gray-2: #dbdbdb !default;
+$gray-3: #c1c1c1 !default;
+$gray-4: #a7a7a7 !default;
+$gray-5: #8e8e8e !default;
+$gray-6: #767676 !default;
+$gray-7: #5f5f5f !default;
+$gray-8: #484848 !default;
+$gray-9: #333333 !default;
+$gray-10: #1f1f1f !default;
+$black: #000 !default;
+
+$ficus-grays: (
+  'white': $white,
+  'gray-1': $gray-1,
+  'gray-2': $gray-2,
+  'gray-3': $gray-3,
+  'gray-4': $gray-4,
+  'gray-5': $gray-5,
+  'gray-6': $gray-6,
+  'gray-7': $gray-7,
+  'gray-8': $gray-8,
+  'gray-9': $gray-9,
+  'gray-10': $gray-10,
+  'black': $black
+);
+
+
+$primary: #54e4e5;
+$secondary: #63e48b;
+
+$ficus-colors: (
+  'primary': $primary,
+  'primary-light': tint($primary, 15%),
+  'primary-dark': shade($primary, 15%),
+  'secondary': $secondary,
+  'secondary-light': tint($secondary, 15%),
+  'secondary-dark': shade($secondary, 15%),
+);

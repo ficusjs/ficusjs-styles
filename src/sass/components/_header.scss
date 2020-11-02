@@ -1,0 +1,42 @@
+.header {
+  // background: var(--primary-color);
+  margin: 0 2em;
+  padding: 2em 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+
+  &::before {
+    content: " ";
+    display: block;
+    // background: linear-gradient(90deg, rgba(84,228,229,1) 0%, rgba(99,228,139,1) 100%);
+    background: var(--gray-2);
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    position: absolute;
+  }
+
+  a {
+    color: var(--gray-9);
+  }
+
+  .nav .menu {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+
+    li {
+      margin: 0 15px;
+
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

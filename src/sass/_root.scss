@@ -1,10 +1,14 @@
 :root {
+  // gray colors
+  @each $color, $value in $ficus-grays {
+    --#{$color}: #{$value};
+  }
   // main colors
   @each $color, $value in $ficus-colors {
     --#{$color}-color: #{$value};
   }
-  // gray colors
-  @each $color, $value in $ficus-grays {
-    --#{$color}: #{$value};
+  // spacers
+  @each $spacer, $value in $ficus-spacers {
+    --spacer-#{$spacer}: #{$value};
   }
 }

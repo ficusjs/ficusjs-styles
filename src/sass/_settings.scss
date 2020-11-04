@@ -1,6 +1,11 @@
-// colors
+// 
+// FicusJS settings
+// 
 
+// Color system
+// ------------
 
+// Set the grays colors
 $white: #fff !default;
 $gray-1: #f6f6f6 !default;
 $gray-2: #dbdbdb !default;
@@ -13,7 +18,6 @@ $gray-8: #484848 !default;
 $gray-9: #333333 !default;
 $gray-10: #1f1f1f !default;
 $black: #000 !default;
-
 $ficus-grays: (
   'white': $white,
   'gray-1': $gray-1,
@@ -29,10 +33,9 @@ $ficus-grays: (
   'black': $black
 );
 
-
+// Set the primary and secondary colors
 $primary: #54e4e5;
 $secondary: #63e48b;
-
 $ficus-colors: (
   'primary': $primary,
   'primary-light': tint($primary, 15%),
@@ -40,4 +43,39 @@ $ficus-colors: (
   'secondary': $secondary,
   'secondary-light': tint($secondary, 15%),
   'secondary-dark': shade($secondary, 15%),
+);
+
+// Spacing
+// -------
+
+// Spacing values
+$spacer-unit: 1rem;
+$spacer-none: 0;
+$spacer-2xs: 0.25 * $spacer-unit;
+$spacer-xs: 0.375 * $spacer-unit;
+$spacer-sm: 0.5 * $spacer-unit;
+$spacer-md: 0.75 * $spacer-unit;
+$spacer-lg: 2 * $spacer-unit;
+$spacer-xl: 3.25 * $spacer-unit;
+$spacer-2xl: 5.25 * $spacer-unit;
+$ficus-spacers: (
+  none: $spacer-none,
+  2xs: $spacer-2xs,
+  xs: $spacer-xs,
+  sm: $spacer-sm,
+  md: $spacer-md,
+  lg: $spacer-lg,
+  xl: $spacer-xl,
+  2xl: $spacer-2xl
+);
+
+// Grid breakpoints
+// ----------------
+
+$grid-breakpoints: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
 );

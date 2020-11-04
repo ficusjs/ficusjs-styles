@@ -3,7 +3,6 @@
   @return mix(white, $color, $percentage);
 }
 
-
 @function shade($color, $percentage) {
   @return mix(black, $color, $percentage);
 }

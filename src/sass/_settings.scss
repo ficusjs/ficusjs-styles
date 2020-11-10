@@ -5,7 +5,6 @@
 // Color system
 // ------------
 
-// Set the grays colors
 $white: #fff !default;
 $gray-1: #f6f6f6 !default;
 $gray-2: #dbdbdb !default;
@@ -18,7 +17,7 @@ $gray-8: #484848 !default;
 $gray-9: #333333 !default;
 $gray-10: #1f1f1f !default;
 $black: #000 !default;
-$ficus-grays: (
+$grays: (
   'white': $white,
   'gray-1': $gray-1,
   'gray-2': $gray-2,
@@ -33,10 +32,9 @@ $ficus-grays: (
   'black': $black
 );
 
-// Set the primary and secondary colors
-$primary: #54e4e5;
-$secondary: #63e48b;
-$ficus-colors: (
+$primary: #333333;
+$secondary: #1f1f1f;
+$colors: (
   'primary': $primary,
   'primary-light': tint($primary, 15%),
   'primary-dark': shade($primary, 15%),
@@ -45,10 +43,32 @@ $ficus-colors: (
   'secondary-dark': shade($secondary, 15%),
 );
 
+$global-colors: map-merge($colors, $grays);
+
+// Typography
+// ----------
+
+$font-primary: sans-serif;
+$font-secondary: serif;
+
+// base values
+$text-base-size: 1em;
+$text-scale-ratio: 1.2;
+
+// type scale
+$type-scale: (
+  'text-xs': calc(1em / (#{$text-scale-ratio} * #{$text-scale-ratio})),
+  'text-sm': calc(1em / #{$text-scale-ratio}),
+  'text-md': calc(1em * #{$text-scale-ratio}),
+  'text-lg': calc(1em * #{$text-scale-ratio} * #{$text-scale-ratio}),
+  'text-xl': calc(1em * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio}),
+  'text-xxl': calc(1em * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio}),
+  'text-xxxl': calc(1em * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio})
+);
+
 // Spacing
 // -------
 
-// Spacing values
 $spacer-unit: 1rem;
 $spacer-none: 0;
 $spacer-2xs: 0.25 * $spacer-unit;
@@ -58,7 +78,7 @@ $spacer-md: 0.75 * $spacer-unit;
 $spacer-lg: 2 * $spacer-unit;
 $spacer-xl: 3.25 * $spacer-unit;
 $spacer-2xl: 5.25 * $spacer-unit;
-$ficus-spacers: (
+$spacers: (
   none: $spacer-none,
   2xs: $spacer-2xs,
   xs: $spacer-xs,
@@ -73,9 +93,117 @@ $ficus-spacers: (
 // ----------------
 
 $grid-breakpoints: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1320px
+  'sm': '(min-width: 36em)',
+  'md': '(min-width: 48em)',
+  'lg': '(min-width: 62em)'
+);
+
+// Utility generator
+// -----------------
+$ficus-utilities: (
+  'bg': (
+    'items': $global-colors,
+    'output': 'standard',
+    'property': 'background'
+  ),
+  'color': (
+    'items': $global-colors,
+    'output': 'standard',
+    'property': 'color'
+  ),
+  'box': (
+    'items': (
+      'block': 'block',
+      'flex': 'flex',
+      'hide': 'none',
+      'show': 'inherit'
+    ),
+    'output': 'responsive',
+    'property': 'display'
+  ),
+  'font': (
+    'items': (
+      'base': 'Helvetica, Arial, sans-serif'
+    ),
+    'output': 'standard',
+    'property': 'font-family'
+  ),
+  'gap-top': (
+    'items': $spacers,
+    'output': 'standard',
+    'property': 'margin-top'
+  ),
+  'gap-right': (
+    'items': $spacers,
+    'output': 'standard',
+    'property': 'margin-right'
+  ),
+  'gap-bottom': (
+    'items': $spacers,
+    'output': 'standard',
+    'property': 'margin-bottom'
+  ),
+  'gap-left': (
+    'items': $spacers,
+    'output': 'standard',
+    'property': 'margin-left'
+  ),
+  'pad-top': (
+    'items': $spacers,
+    'output': 'standard',
+    'property': 'padding-top'
+  ),
+  'pad-right': (
+    'items': $spacers,
+    'output': 'standard',
+    'property': 'padding-right'
+  ),
+  'pad-bottom': (
+    'items': $spacers,
+    'output': 'standard',
+    'property': 'padding-bottom'
+  ),
+  'pad-left': (
+    'items': $spacers,
+    'output': 'standard',
+    'property': 'padding-left'
+  ),
+  'stack': (
+    'items': (
+      '300': 0,
+      '400': 10,
+      '500': 20,
+      '600': 30,
+      '700': 40
+    ),
+    'output': 'standard',
+    'property': 'z-index'
+  ),
+  'text': (
+    'items': $type-scale,
+    'output': 'responsive',
+    'property': 'font-size'
+  ),
+  'weight': (
+    'items': (
+      'light': '300',
+      'regular': '400',
+      'bold': '700'
+    ),
+    'output': 'standard',
+    'property': 'font-weight'
+  ),
+  'width': (
+    'items': (
+      'full': '100%',
+      'half': percentage(1/2),
+      'quarter': percentage(1/4),
+      'third': percentage(1/3)
+    ),
+    'output': 'responsive',
+    'property': 'width'
+  ),
+  'breakpoints': (
+    $grid-breakpoints
+  )
 );

@@ -1,4 +1,4 @@
-@import 'utilities/cycle';
+@import 'cycle';
 
 /// Only run if there should be an output
 @if ($outputTokenCSS == true) {
@@ -6,8 +6,8 @@
   @include cycle('', false);
 
   /// For each breakpoint, generate a prefix and run the cycle
-  @each $key, $value in map-get($ficus-utilities, 'breakpoints') {
-    $prefix: #{$key + '\\:'};
+  @each $key, $value in map-get($utilities, 'breakpoints') {
+    $prefix: #{$key + '-'};
     $is-breakpoint: true;
 
     @media screen and #{$value} {

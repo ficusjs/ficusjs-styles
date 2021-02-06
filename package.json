@@ -1,22 +1,27 @@
 {
 	"name": "ficusjs-styles",
-	"version": "0.1.0",
+	"version": "1.0.0-alpha.0",
 	"description": "Global styles for FicusJS",
 	"scripts": {
-		"build": "run-p build:*",
-		"build:sass": "node-sass --output-style compressed --output ./dist/css ./src/sass",
-		"dev": "run-p watch:*",
-		"watch:sass": "node-sass-chokidar ./src/sass --watch --recursive --output-style compressed --output ./dist/css",
+		"sass": "run-s sass:compile clean:css",
+		"sass:compile": "run-p sass:compile:*",
+		"sass:compile:theme": "sass src/scss/ficus-globals.scss dist/css/ficus-globals.css",
+		"sass:compile:utilities": "sass src/scss/ficus-utilities.scss dist/css/ficus-utilities.css",
+		"clean:css": "run-p clean:css:*",
+		"clean:css:theme": "cleancss -o dist/css/ficus-globals.min.css dist/css/ficus-globals.css",
+		"clean:css:utilities": "cleancss -o dist/css/ficus-utilities.min.css dist/css/ficus-utilities.css",
+		"watch:sass:compile": "chokidar \"src/**/*.scss\" -c \"run-p sass\"",
+		"watch:sass": "run-p watch:sass:*",
 		"lint:sass": "stylelint \"src/sass/**/*.scss\""
 	},
 	"author": "James Cavanagh",
 	"license": "ISC",
 	"devDependencies": {
-		"http-server": "0.12.3",
-		"node-sass": "4.14.1",
-		"node-sass-chokidar": "1.5.0",
+		"clean-css-cli": "4.3.0",
+		"chokidar-cli": "2.1.0",
+		"sass": "1.32.6",
 		"npm-run-all": "4.1.5",
-		"stylelint": "13.6.1",
+		"stylelint": "13.9.0",
 		"stylelint-config-standard": "20.0.0"
 	}
 }

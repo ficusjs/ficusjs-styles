@@ -1,2 +1,6 @@
 node_modules
 .idea
+.vscode
+build
+tmp
+.DS_Store

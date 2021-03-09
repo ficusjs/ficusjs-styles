@@ -33,12 +33,13 @@
   @each $elevation, $value in $ui-elevations {
     --#{$elevation}: #{$value};
   }
+  // Border radius
   @each $border-radius, $value in $ui-border-radius {
     --#{$border-radius}: #{$value};
   }
 }
 
-// adds custom properties to the `data-theme` attribute 
+// adds custom properties to the `data-theme` attribute
 @if $enable-dark-mode {
   [data-theme="dark"] {
     // colors
@@ -50,10 +51,8 @@
       --#{$dm-ui-style}: #{$value};
     }
     // Elevations
-  @each $dm-elevation, $value in $dm-ui-elevations {
-    --#{$dm-elevation}: #{$value};
-  }
+    @each $dm-elevation, $value in $dm-ui-elevations {
+      --#{$dm-elevation}: #{$value};
+    }
   }
 }
-
-

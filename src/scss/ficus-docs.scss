@@ -1,0 +1,19 @@
+// Documentation styles
+//
+// Classes prefixed with `.fd-`. Used for the design and layout of the Ficus documentation site.
+//
+
+// Ficus globals
+@import 'functions';
+@import 'settings';
+
+// Documentation components
+@import 'docs/main-layout';
+@import 'docs/doc-layout';
+@import 'docs/sidebar';
+@import 'docs/direct-link';
+@import 'docs/table-of-contents';
+@import 'docs/component-container';
+@import 'docs/tables';
+@import 'docs/prism';
+@import 'docs/theme-toggle';

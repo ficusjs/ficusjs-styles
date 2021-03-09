@@ -1,8 +1,8 @@
 @use 'functions' as *;
 
-// 
+//
 // FicusJS settings
-// 
+//
 
 // Color system
 // ------------
@@ -10,7 +10,7 @@
 $white: #fff !default;
 $black: #000 !default;
 $gray-10: #fafafa !default;
-$gray-20: #dddddd !default;
+$gray-20: #ddd !default;
 $gray-30: #c0c0c0 !default;
 $gray-40: #a4a4a4 !default;
 $gray-50: #898989 !default;
@@ -70,9 +70,9 @@ $colors: (
   'secondary-dark': shade($secondary, 20%),
   'body-bg': $body-bg,
   'body': $body-color,
-  'high-emphasis-text': rgba($body-color, .87),
-  'medium-emphasis-text': rgba($body-color, .6),
-  'low-emphasis-text': rgba($body-color, .38),
+  'high-emphasis-text': rgba($body-color, 0.87),
+  'medium-emphasis-text': rgba($body-color, 0.6),
+  'low-emphasis-text': rgba($body-color, 0.38),
 );
 
 $global-colors: map-merge($colors, $grays);
@@ -127,7 +127,7 @@ $line-heights: (
   'body-line-height': 1.5
 );
 
-// font weights 
+// font weights
 $font-weights: (
   'light': 300,
   'normal': 400,
@@ -217,15 +217,15 @@ $ui-elevation-background-06: $white;
 $ui-elevation-background-07: $white;
 $ui-elevation-background-08: $white;
 $ui-elevation-background-09: $white;
-$ui-elevation-shadow-01: 0 2px 1px -1px rgba($black,.2),0 1px 1px 0 rgba($black,.14),0 1px 3px 0 rgba($black,.12);
-$ui-elevation-shadow-02: 0 3px 1px -2px rgba($black,.2),0 2px 2px 0 rgba($black,.14),0 1px 5px 0 rgba($black,.12);
-$ui-elevation-shadow-03: 0 3px 3px -2px rgba($black,.2),0 3px 4px 0 rgba($black,.14),0 1px 8px 0 rgba($black,.12);
-$ui-elevation-shadow-04: 0 2px 4px -1px rgba($black,.2),0 4px 5px 0 rgba($black,.14),0 1px 10px 0 rgba($black,.12);
-$ui-elevation-shadow-05: 0 3px 5px -1px rgba($black,.2),0 6px 10px 0 rgba($black,.14),0 1px 18px 0 rgba($black,.12);
-$ui-elevation-shadow-06: 0 5px 5px -3px rgba($black,.2),0 8px 10px 1px rgba($black,.14),0 3px 14px 2px rgba($black,.12);
-$ui-elevation-shadow-07: 0 7px 8px -4px rgba($black,.2),0 12px 17px 2px rgba($black,.14),0 5px 22px 4px rgba($black,.12);
-$ui-elevation-shadow-08: 0 8px 10px -5px rgba($black,.2),0 16px 24px 2px rgba($black,.14),0 6px 30px 5px rgba($black,.12);
-$ui-elevation-shadow-09: 0 11px 15px -7px rgba($black,.2),0 24px 38px 3px rgba($black,.14),0 9px 46px 8px rgba($black,.12);
+$ui-elevation-shadow-01: 0 2px 1px -1px rgba($black, 0.2),0 1px 1px 0 rgba($black, 0.14),0 1px 3px 0 rgba($black, 0.12);
+$ui-elevation-shadow-02: 0 3px 1px -2px rgba($black, 0.2),0 2px 2px 0 rgba($black, 0.14),0 1px 5px 0 rgba($black, 0.12);
+$ui-elevation-shadow-03: 0 3px 3px -2px rgba($black, 0.2),0 3px 4px 0 rgba($black, 0.14),0 1px 8px 0 rgba($black, 0.12);
+$ui-elevation-shadow-04: 0 2px 4px -1px rgba($black, 0.2),0 4px 5px 0 rgba($black, 0.14),0 1px 10px 0 rgba($black, 0.12);
+$ui-elevation-shadow-05: 0 3px 5px -1px rgba($black, 0.2),0 6px 10px 0 rgba($black, 0.14),0 1px 18px 0 rgba($black, 0.12);
+$ui-elevation-shadow-06: 0 5px 5px -3px rgba($black, 0.2),0 8px 10px 1px rgba($black, 0.14),0 3px 14px 2px rgba($black, 0.12);
+$ui-elevation-shadow-07: 0 7px 8px -4px rgba($black, 0.2),0 12px 17px 2px rgba($black, 0.14),0 5px 22px 4px rgba($black, 0.12);
+$ui-elevation-shadow-08: 0 8px 10px -5px rgba($black, 0.2),0 16px 24px 2px rgba($black, 0.14),0 6px 30px 5px rgba($black, 0.12);
+$ui-elevation-shadow-09: 0 11px 15px -7px rgba($black, 0.2),0 24px 38px 3px rgba($black, 0.14),0 9px 46px 8px rgba($black, 0.12);
 $ui-elevations: (
   'ui-elevation-background-01': $ui-elevation-background-01,
   'ui-elevation-background-02': $ui-elevation-background-02,
@@ -294,7 +294,6 @@ $ui-styles: (
   'ui-color': $ui-color
 ) !default;
 
-
 // Border radius
 $ui-border-radius-01: 2px;
 $ui-border-radius-02: 4px;
@@ -316,7 +315,7 @@ $dm-primary: #54e4e5 !default;
 $dm-secondary: #63e48b !default;
 $dm-body-bg: $gray-100 !default;
 $dm-body-color: $white !default;
-$dm-border-color: rgba($white, .1);
+$dm-border-color: rgba($white, 0.1);
 $dm-colors: (
   'primary': $dm-primary,
   'primary-light': tint($dm-primary, 20%),
@@ -326,9 +325,9 @@ $dm-colors: (
   'secondary-dark': shade($dm-secondary, 20%),
   'body-bg': $dm-body-bg,
   'body': $dm-body-color,
-  'high-emphasis-text': rgba($dm-body-color, .87),
-  'medium-emphasis-text': rgba($dm-body-color, .6),
-  'low-emphasis-text': rgba($dm-body-color, .38),
+  'high-emphasis-text': rgba($dm-body-color, 0.87),
+  'medium-emphasis-text': rgba($dm-body-color, 0.6),
+  'low-emphasis-text': rgba($dm-body-color, 0.38),
   'border': $dm-border-color
 ) !default;
 
@@ -344,15 +343,15 @@ $dm-ui-elevation-background-06: $gray-40;
 $dm-ui-elevation-background-07: $gray-30;
 $dm-ui-elevation-background-08: $gray-20;
 $dm-ui-elevation-background-09: $gray-10;
-$dm-ui-elevation-shadow-01: 0 2px 1px -1px rgba($black,.2),0 1px 1px 0 rgba($black,.14),0 1px 3px 0 rgba($black,.12);
-$dm-ui-elevation-shadow-02: 0 3px 1px -2px rgba($black,.2),0 2px 2px 0 rgba($black,.14),0 1px 5px 0 rgba($black,.12);
-$dm-ui-elevation-shadow-03: 0 3px 3px -2px rgba($black,.2),0 3px 4px 0 rgba($black,.14),0 1px 8px 0 rgba($black,.12);
-$dm-ui-elevation-shadow-04: 0 2px 4px -1px rgba($black,.2),0 4px 5px 0 rgba($black,.14),0 1px 10px 0 rgba($black,.12);
-$dm-ui-elevation-shadow-05: 0 3px 5px -1px rgba($black,.2),0 6px 10px 0 rgba($black,.14),0 1px 18px 0 rgba($black,.12);
-$dm-ui-elevation-shadow-06: 0 5px 5px -3px rgba($black,.2),0 8px 10px 1px rgba($black,.14),0 3px 14px 2px rgba($black,.12);
-$dm-ui-elevation-shadow-07: 0 7px 8px -4px rgba($black,.2),0 12px 17px 2px rgba($black,.14),0 5px 22px 4px rgba($black,.12);
-$dm-ui-elevation-shadow-08: 0 8px 10px -5px rgba($black,.2),0 16px 24px 2px rgba($black,.14),0 6px 30px 5px rgba($black,.12);
-$dm-ui-elevation-shadow-09: 0 11px 15px -7px rgba($black,.2),0 24px 38px 3px rgba($black,.14),0 9px 46px 8px rgba($black,.12);
+$dm-ui-elevation-shadow-01: 0 2px 1px -1px rgba($black, 0.2),0 1px 1px 0 rgba($black, 0.14),0 1px 3px 0 rgba($black, 0.12);
+$dm-ui-elevation-shadow-02: 0 3px 1px -2px rgba($black, 0.2),0 2px 2px 0 rgba($black, 0.14),0 1px 5px 0 rgba($black, 0.12);
+$dm-ui-elevation-shadow-03: 0 3px 3px -2px rgba($black, 0.2),0 3px 4px 0 rgba($black, 0.14),0 1px 8px 0 rgba($black, 0.12);
+$dm-ui-elevation-shadow-04: 0 2px 4px -1px rgba($black, 0.2),0 4px 5px 0 rgba($black, 0.14),0 1px 10px 0 rgba($black, 0.12);
+$dm-ui-elevation-shadow-05: 0 3px 5px -1px rgba($black, 0.2),0 6px 10px 0 rgba($black, 0.14),0 1px 18px 0 rgba($black, 0.12);
+$dm-ui-elevation-shadow-06: 0 5px 5px -3px rgba($black, 0.2),0 8px 10px 1px rgba($black, 0.14),0 3px 14px 2px rgba($black, 0.12);
+$dm-ui-elevation-shadow-07: 0 7px 8px -4px rgba($black, 0.2),0 12px 17px 2px rgba($black, 0.14),0 5px 22px 4px rgba($black, 0.12);
+$dm-ui-elevation-shadow-08: 0 8px 10px -5px rgba($black, 0.2),0 16px 24px 2px rgba($black, 0.14),0 6px 30px 5px rgba($black, 0.12);
+$dm-ui-elevation-shadow-09: 0 11px 15px -7px rgba($black, 0.2),0 24px 38px 3px rgba($black, 0.14),0 9px 46px 8px rgba($black, 0.12);
 $dm-ui-elevations: (
   'ui-elevation-background-01': $dm-ui-elevation-background-01,
   'ui-elevation-background-02': $dm-ui-elevation-background-02,

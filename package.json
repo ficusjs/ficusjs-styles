@@ -1,7 +1,9 @@
 {
   "name": "@ficusjs/styles",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "description": "Global styles for FicusJS",
+  "main": "dist/loader/index.js",
+  "module": "dist/loader/index.js",
   "scripts": {
     "prebuild": "rimraf dist build",
     "build": "run-p build:*",

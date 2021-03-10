@@ -1,10 +1,11 @@
 {
   "name": "@ficusjs/styles",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "description": "Global styles for FicusJS",
   "scripts": {
     "prebuild": "rimraf dist build",
     "build": "run-p build:*",
+    "build:loader": "rollup -i src/loader/index.js -o dist/loader/index.js -f es -p \"terser={mangle: { keep_fnames: true, toplevel: true, module: true }}\" -p \"filesize={}\"",
     "build:docs": "npm run sass && cross-env NODE_ENV=production eleventy --input=src --output=build",
     "predev": "rimraf tmp && npm run sass",
     "dev": "run-p watch:*",
@@ -65,10 +66,18 @@
     "markdown-it-table-of-contents": "0.5.2",
     "markdown-to-txt": "1.0.1",
     "npm-run-all": "4.1.5",
+    "rollup": "2.40.0",
+    "rollup-plugin-filesize": "9.1.1",
+    "rollup-plugin-terser": "7.0.2",
     "sass": "1.32.8",
     "slugify": "1.4.7",
     "stylelint": "13.12.0",
     "stylelint-config-standard": "21.0.0",
     "stylelint-scss": "3.19.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/loader/index.js"
+    }
   }
 }

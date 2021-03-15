@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FicusJS components</title>
+    <title>FicusJS Styles</title>
     <base href="/">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -19,6 +19,9 @@
     {% include "../../tmp/css/ficus-globals.css" %}
     {% include "../../tmp/css/ficus-utilities.css" %}
     {% include "../../tmp/css/ficus-docs.css" %}
+    {% include "../../node_modules/@ficusjs/components/dist/components/html/navbar/navbar.css" %}
+    {% include "../../node_modules/@ficusjs/components/dist/components/html/navigation/navigation.css" %}
+    {% include "../../node_modules/@ficusjs/components/dist/components/html/button/button.css" %}
     {% endset %}
     {% if project.environment == "production" %}
       <style>{{ css | cssmin | safe }}</style>
@@ -51,9 +54,6 @@
           <summary class="fc-button">Menu</summary>
           {% include "navs/getting-started.njk" %}
           {% include "navs/guidelines.njk" %}
-          {% include "navs/forms.njk" %}
-          {% include "navs/custom-elements.njk" %}
-          {% include "navs/html.njk" %}
         </details>
       </div>
 

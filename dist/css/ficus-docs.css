@@ -5,10 +5,17 @@
   z-index: 1030;
 }
 
+.fc-footer {
+  grid-area: footer;
+  position: sticky;
+  bottom: 0;
+  z-index: 1040;
+}
+
 .fd-main-layout {
   display: grid;
   grid-template-rows: auto auto minmax(0, 1fr);
-  grid-template-areas: "header" "sidebar" "content";
+  grid-template-areas: "header" "sidebar" "content" "footer";
   min-height: 100vh;
 }
 
@@ -16,7 +23,7 @@
   .fd-main-layout {
     grid-template-columns: var(--sidebar-width) 1fr;
     grid-template-rows: var(--header-height) auto;
-    grid-template-areas: "header header" "sidebar content";
+    grid-template-areas: "header header" "sidebar content" "footer footer";
   }
 }
 .fd-doc-layout {

@@ -1,6 +1,14 @@
+:root {
+  --footer-height: 36px;
+}
+
 .fd-footer {
-  background: var(--ui-elevation-background-01);
+  position: sticky;
+  bottom: 0;
+  height: var(--footer-height);
   display: flex;
   align-items: stretch;
+  grid-area: footer;
   border-top: 1px solid var(--ui-border-02);
+  background: var(--ui-elevation-background-01);
 }

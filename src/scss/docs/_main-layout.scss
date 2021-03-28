@@ -30,7 +30,7 @@
 @media (min-width: 992px) {
   .fd-main-layout {
     grid-template-columns: var(--sidebar-width) 1fr;
-    grid-template-rows: var(--header-height) auto;
+    grid-template-rows: var(--header-height) auto auto;
     grid-template-areas:
       "header header"
       "sidebar content"

@@ -109,6 +109,14 @@ $type-scale: (
   '08': $text-08
 );
 
+// Icon sizes
+$icon-size-01: 1.125rem;
+$icon-size-02: 1.5rem;
+$icons: (
+  '01': $icon-size-01,
+  '02': $icon-size-02
+);
+
 // States
 $state-required: #fa4d56; // change this!
 $state-invalid: #fa4d56; // change this!

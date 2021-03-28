@@ -21,6 +21,10 @@
   @each $type, $value in $type-scale {
     --text-#{$type}: #{$value};
   }
+  // Icons
+  @each $icon, $value in $icons {
+    --icon-#{$icon}: #{$value};
+  }
   // Line heights
   @each $line-height, $value in $line-heights {
     --#{$line-height}: #{$value};

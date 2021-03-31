@@ -2,14 +2,12 @@
   grid-area: header;
   position: sticky;
   top: 0;
-  z-index: 1030;
 }
 
 .fc-footer {
   grid-area: footer;
   position: sticky;
   bottom: 0;
-  z-index: 1040;
 }
 
 .fd-main-layout {

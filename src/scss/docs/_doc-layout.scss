@@ -55,36 +55,36 @@
   grid-auto-rows: min-content;
   width: 100%;
 
-  .sticky-aside {
-    max-width: 350px;
-    grid-area: sticky-aside;
-  }
-
-  .toc {
+  .fd-toc {
     position: sticky;
     top: 100px;
-  }
 
-  .toc span {
-    display: inline-block;
-    font-weight: 600;
-    margin-bottom: calc(var(--text-04) / 4);
+    span {
+      display: inline-block;
+      font-weight: 600;
+      margin-bottom: calc(var(--text-04) / 4);
+    }
   }
 
   .toc__nav {
     font-size: var(--text-02);
-  }
 
-  .toc__nav ol {
-    list-style: none;
-    margin: 0;
-    padding-left: var(--text-04);
-  }
+    ol {
+      list-style: none;
+      margin: 0;
+      padding-left: var(--text-04);
+    }
 
-  .toc__nav a {
-    display: inline-block;
-    text-decoration: none;
-    padding: calc(var(--text-04) / 4) 0;
-    color: var(--gray-70-color);
+    a {
+      display: inline-block;
+      text-decoration: none;
+      padding: calc(var(--text-04) / 4) 0;
+      color: var(--gray-70-color);
+    }
   }
+}
+
+.fd-sticky-aside {
+  max-width: 350px;
+  grid-area: sticky-aside;
 }

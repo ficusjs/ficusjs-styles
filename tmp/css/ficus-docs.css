@@ -70,15 +70,11 @@
   grid-auto-rows: min-content;
   width: 100%;
 }
-.fd-doc-layout-toc .sticky-aside {
-  max-width: 350px;
-  grid-area: sticky-aside;
-}
-.fd-doc-layout-toc .toc {
+.fd-doc-layout-toc .fd-toc {
   position: sticky;
   top: 100px;
 }
-.fd-doc-layout-toc .toc span {
+.fd-doc-layout-toc .fd-toc span {
   display: inline-block;
   font-weight: 600;
   margin-bottom: calc(var(--text-04) / 4);
@@ -96,6 +92,11 @@
   text-decoration: none;
   padding: calc(var(--text-04) / 4) 0;
   color: var(--gray-70-color);
+}
+
+.fd-sticky-aside {
+  max-width: 350px;
+  grid-area: sticky-aside;
 }
 
 :root {

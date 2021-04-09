@@ -445,9 +445,14 @@ pre[class*=language-] {
   font-size: x-small;
   padding: 1px 3px;
   background: darkmagenta;
-  color: var(--ui-color);
+  color: #fff;
   font-weight: bold;
   margin-left: 5px;
+}
+
+[data-theme=dark] .fd-deprecated {
+  background: magenta;
+  color: #000;
 }
 
 /*# sourceMappingURL=ficus-docs.css.map */

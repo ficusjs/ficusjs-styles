@@ -3,7 +3,16 @@
   font-size: x-small;
   padding: 1px 3px;
   background: darkmagenta;
-  color: var(--ui-color);
+  color: $white;
   font-weight: bold;
   margin-left: 5px;
+}
+
+@if $enable-dark-mode {
+  [data-theme="dark"] {
+    .fd-deprecated {
+      background: magenta;
+      color: $black;
+    }
+  }
 }

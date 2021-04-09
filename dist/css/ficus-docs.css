@@ -440,4 +440,14 @@ pre[class*=language-] {
   background: var(--ui-elevation-background-01);
 }
 
+.fd-deprecated {
+  text-transform: uppercase;
+  font-size: x-small;
+  padding: 1px 3px;
+  background: darkmagenta;
+  color: var(--ui-color);
+  font-weight: bold;
+  margin-left: 5px;
+}
+
 /*# sourceMappingURL=ficus-docs.css.map */

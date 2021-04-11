@@ -47,7 +47,7 @@
     "sass"
   ],
   "author": "James Cavanagh",
-  "license": "ISC",
+  "license": "MIT",
   "files": [
     "dist",
     "src"

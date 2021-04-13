@@ -1,36 +1,21 @@
-.fc-navbar {
-  grid-area: header;
-  position: sticky;
-  top: 0;
-}
-
-.fc-footer {
-  grid-area: footer;
-  position: sticky;
-  bottom: 0;
-}
-
 .fd-main-layout {
-  display: grid;
-  grid-template-rows: auto auto minmax(0, 1fr);
-  grid-template-areas: "header" "sidebar" "content" "footer";
   min-height: 100vh;
 }
 
 @media (min-width: 992px) {
+  .fc-navbar {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+  }
+
   .fd-main-layout {
+    display: grid;
     grid-template-columns: var(--sidebar-width) 1fr;
     grid-template-rows: var(--header-height) auto auto;
     grid-template-areas: "header header" "sidebar content" "footer footer";
   }
 }
-.fd-doc-layout {
-  max-width: 1250px;
-  width: 100%;
-  margin: 0 auto;
-  min-width: 0;
-}
-
 .fd-doc-article {
   --flow-space: var(--spacing-05);
 }
@@ -56,49 +41,86 @@
 .fd-doc-article table {
   --flow-space: var(--spacing-07);
 }
-.fd-doc-article > :not(pre):not(table):not(.fd-component-container):not(hr) {
-  max-width: 42rem;
+@media (min-width: 992px) {
+  .fd-doc-article > :not(pre):not(table):not(.fd-component-container):not(hr) {
+    max-width: 42rem;
+  }
+}
+@media (max-width: 992px) {
+  .fd-doc-article h1 {
+    font-size: var(--text-05);
+  }
+  .fd-doc-article h2 {
+    font-size: var(--text-04);
+  }
+  .fd-doc-article h3 {
+    font-size: var(--text-03);
+  }
+  .fd-doc-article h4 {
+    font-size: var(--text-02);
+  }
+  .fd-doc-article h5 {
+    font-size: var(--text-01);
+  }
+  .fd-doc-article h6 {
+    font-size: var(--text-01);
+  }
 }
 
 .fd-doc-layout-toc {
-  padding: calc(var(--spacing-07) * 2);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(0, 960px) 220px;
-  grid-template-areas: "breadcrumb sticky-aside" "article sticky-aside";
-  column-gap: calc(var(--spacing-07) * 2);
-  grid-auto-rows: min-content;
-  width: 100%;
+  padding: var(--spacing-05);
 }
 .fd-doc-layout-toc .fd-toc {
-  position: sticky;
-  top: 100px;
-}
-.fd-doc-layout-toc .fd-toc span {
-  display: inline-block;
-  font-weight: 600;
-  margin-bottom: calc(var(--text-04) / 4);
-}
-.fd-doc-layout-toc .toc__nav {
-  font-size: var(--text-02);
-}
-.fd-doc-layout-toc .toc__nav ol {
-  list-style: none;
-  margin: 0;
-  padding-left: var(--text-04);
-}
-.fd-doc-layout-toc .toc__nav a {
-  display: inline-block;
-  text-decoration: none;
-  padding: calc(var(--text-04) / 4) 0;
-  color: var(--gray-70-color);
+  display: none;
 }
 
-.fd-sticky-aside {
-  max-width: 350px;
-  grid-area: sticky-aside;
-}
+@media (min-width: 992px) {
+  .fd-doc-layout {
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
+    min-width: 0;
+  }
 
+  .fd-doc-layout-toc {
+    padding: calc(var(--spacing-07) * 2);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 960px) 220px;
+    grid-template-areas: "breadcrumb sticky-aside" "article sticky-aside";
+    column-gap: calc(var(--spacing-07) * 2);
+    grid-auto-rows: min-content;
+    width: 100%;
+  }
+  .fd-doc-layout-toc .fd-toc {
+    position: sticky;
+    top: 100px;
+  }
+  .fd-doc-layout-toc .fd-toc span {
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: calc(var(--text-04) / 4);
+  }
+  .fd-doc-layout-toc .toc__nav {
+    font-size: var(--text-02);
+  }
+  .fd-doc-layout-toc .toc__nav ol {
+    list-style: none;
+    margin: 0;
+    padding-left: var(--text-04);
+  }
+  .fd-doc-layout-toc .toc__nav a {
+    display: inline-block;
+    text-decoration: none;
+    padding: calc(var(--text-04) / 4) 0;
+    color: var(--gray-70-color);
+  }
+
+  .fd-sticky-aside {
+    max-width: 350px;
+    grid-area: sticky-aside;
+  }
+}
 :root {
   --sidebar-width: 300px;
 }
@@ -207,21 +229,25 @@ table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  border-top: 1px solid var(--ui-border-02);
-  border-right: 1px solid var(--ui-border-02);
-  border-left: 1px solid var(--ui-border-02);
 }
 
 table thead {
-  background-color: var(--ui-background-02);
+  display: none;
 }
 
-table tbody {
+table tr {
+  margin-bottom: var(--spacing-03);
+  display: block;
   background-color: var(--ui-background-01);
+  border-left: 1px solid var(--ui-border-02);
+  border-right: 1px solid var(--ui-border-02);
 }
 
-table td,
-table tbody th {
+table td {
+  display: block;
+  text-align: left;
+  vertical-align: middle;
+  padding: var(--spacing-04) var(--spacing-05);
   border-top: 1px solid var(--ui-border-02);
   border-bottom: 1px solid var(--ui-border-02);
   margin: 0;
@@ -231,13 +257,51 @@ table code {
   word-break: normal;
 }
 
-table td,
-table th {
-  text-align: left;
-  vertical-align: middle;
-  padding: var(--spacing-04) var(--spacing-05);
-}
+@media (min-width: 992px) {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-top: 1px solid var(--ui-border-02);
+    border-right: 1px solid var(--ui-border-02);
+    border-left: 1px solid var(--ui-border-02);
+  }
 
+  table thead {
+    display: block;
+    background-color: var(--ui-background-02);
+  }
+
+  table tbody {
+    background-color: var(--ui-background-01);
+  }
+
+  table tr {
+    margin-bottom: 0;
+    display: block;
+    background-color: transparent;
+    border-left: none;
+    border-right: none;
+  }
+
+  table td {
+    display: table-cell;
+  }
+
+  table th,
+table td {
+    text-align: left;
+    vertical-align: middle;
+    padding: var(--spacing-04) var(--spacing-05);
+  }
+
+  table td,
+table tbody th {
+    border-top: 1px solid var(--ui-border-02);
+    border-bottom: 1px solid var(--ui-border-02);
+    margin: 0;
+  }
+}
 /**
  * atom-dark theme for `prism.js`
  * Based on Atom's `atom-dark` theme: https://github.com/atom/atom-dark-syntax
@@ -430,14 +494,19 @@ pre[class*=language-] {
 }
 
 .fd-footer {
-  position: sticky;
+  position: fixed;
   bottom: 0;
   height: var(--footer-height);
   display: flex;
   align-items: stretch;
-  grid-area: footer;
   border-top: 1px solid var(--ui-border-02);
   background: var(--ui-elevation-background-01);
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .fd-footer {
+    grid-area: footer;
+  }
 }
 
 .fd-deprecated {

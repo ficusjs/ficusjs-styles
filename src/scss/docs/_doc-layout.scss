@@ -1,13 +1,4 @@
-// Layout
-.fd-doc-layout {
-  max-width: 1250px;
-  width: 100%;
-  margin: 0 auto;
-  min-width: 0;
-}
-
 .fd-doc-article {
-
   // content flow
   --flow-space: var(--spacing-05);
 
@@ -40,51 +31,80 @@
     --flow-space: var(--spacing-07);
   }
 
-  & > :not(pre):not(table):not(.fd-component-container):not(hr) {
-    max-width: 42rem;
+  @media (min-width: 992px) {
+    & > :not(pre):not(table):not(.fd-component-container):not(hr) {
+      max-width: 42rem;
+    }
+  }
+
+  @media (max-width: 992px) {
+    h1 { font-size: var(--text-05); }
+    h2 { font-size: var(--text-04); }
+    h3 { font-size: var(--text-03); }
+    h4 { font-size: var(--text-02); }
+    h5 { font-size: var(--text-01); }
+    h6 { font-size: var(--text-01); }
   }
 }
 
 .fd-doc-layout-toc {
-  padding: calc(var(--spacing-07) * 2);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(0, 960px) 220px;
-  grid-template-areas: "breadcrumb sticky-aside" "article sticky-aside";
-  column-gap: calc(var(--spacing-07) * 2);
-  grid-auto-rows: min-content;
-  width: 100%;
+  padding: var(--spacing-05);
 
   .fd-toc {
-    position: sticky;
-    top: 100px;
-
-    span {
-      display: inline-block;
-      font-weight: 600;
-      margin-bottom: calc(var(--text-04) / 4);
-    }
-  }
-
-  .toc__nav {
-    font-size: var(--text-02);
-
-    ol {
-      list-style: none;
-      margin: 0;
-      padding-left: var(--text-04);
-    }
-
-    a {
-      display: inline-block;
-      text-decoration: none;
-      padding: calc(var(--text-04) / 4) 0;
-      color: var(--gray-70-color);
-    }
+    display: none;
   }
 }
 
-.fd-sticky-aside {
-  max-width: 350px;
-  grid-area: sticky-aside;
+@media (min-width: 992px) {
+  // Layout
+  .fd-doc-layout {
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
+    min-width: 0;
+  }
+
+  .fd-doc-layout-toc {
+    padding: calc(var(--spacing-07) * 2);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 960px) 220px;
+    grid-template-areas: "breadcrumb sticky-aside" "article sticky-aside";
+    column-gap: calc(var(--spacing-07) * 2);
+    grid-auto-rows: min-content;
+    width: 100%;
+
+    .fd-toc {
+      position: sticky;
+      top: 100px;
+
+      span {
+        display: inline-block;
+        font-weight: 600;
+        margin-bottom: calc(var(--text-04) / 4);
+      }
+    }
+
+    .toc__nav {
+      font-size: var(--text-02);
+
+      ol {
+        list-style: none;
+        margin: 0;
+        padding-left: var(--text-04);
+      }
+
+      a {
+        display: inline-block;
+        text-decoration: none;
+        padding: calc(var(--text-04) / 4) 0;
+        color: var(--gray-70-color);
+      }
+    }
+  }
+
+  .fd-sticky-aside {
+    max-width: 350px;
+    grid-area: sticky-aside;
+  }
 }

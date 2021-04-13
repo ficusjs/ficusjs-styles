@@ -4,21 +4,25 @@ table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  border-top: 1px solid var(--ui-border-02);
-  border-right: 1px solid var(--ui-border-02);
-  border-left: 1px solid var(--ui-border-02);
 }
 
 table thead {
-  background-color: var(--ui-background-02);
+  display: none;
 }
 
-table tbody {
+table tr {
+  margin-bottom: var(--spacing-03);
+  display: block;
   background-color: var(--ui-background-01);
+  border-left: 1px solid var(--ui-border-02);
+  border-right: 1px solid var(--ui-border-02);
 }
 
-table td,
-table tbody th {
+table td {
+  display: block;
+  text-align: left;
+  vertical-align: middle;
+  padding: var(--spacing-04) var(--spacing-05);
   border-top: 1px solid var(--ui-border-02);
   border-bottom: 1px solid var(--ui-border-02);
   margin: 0;
@@ -28,9 +32,48 @@ table code {
   word-break: normal;
 }
 
-table td,
-table th {
-  text-align: left;
-  vertical-align: middle;
-  padding: var(--spacing-04) var(--spacing-05);
+@media (min-width: 992px) {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-top: 1px solid var(--ui-border-02);
+    border-right: 1px solid var(--ui-border-02);
+    border-left: 1px solid var(--ui-border-02);
+  }
+
+  table thead {
+    display: block;
+    background-color: var(--ui-background-02);
+  }
+
+  table tbody {
+    background-color: var(--ui-background-01);
+  }
+
+  table tr {
+    margin-bottom: 0;
+    display: block;
+    background-color: transparent;
+    border-left: none;
+    border-right: none;
+  }
+
+  table td {
+    display: table-cell;
+  }
+
+  table th,
+  table td {
+    text-align: left;
+    vertical-align: middle;
+    padding: var(--spacing-04) var(--spacing-05);
+  }
+
+  table td,
+  table tbody th {
+    border-top: 1px solid var(--ui-border-02);
+    border-bottom: 1px solid var(--ui-border-02);
+    margin: 0;
+  }
 }

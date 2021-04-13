@@ -3,12 +3,16 @@
 }
 
 .fd-footer {
-  position: sticky;
+  position: fixed;
   bottom: 0;
   height: var(--footer-height);
   display: flex;
   align-items: stretch;
-  grid-area: footer;
   border-top: 1px solid var(--ui-border-02);
   background: var(--ui-elevation-background-01);
+  width: 100%;
+
+  @media (min-width: 992px) {
+    grid-area: footer;
+  }
 }

@@ -1,0 +1,96 @@
+//
+// Typography
+//
+
+// Font families
+$primary-font: 'Raleway', sans-serif;
+$secondary-font: 'Open Sans', sans-serif;
+$font-families: (
+  'primary': $primary-font,
+  'secondary': $secondary-font,
+);
+
+// Text scale
+$text-base-size: 1rem;
+$text-01: $text-base-size * 0.75;
+$text-02: $text-base-size * 0.875;
+$text-03: $text-base-size;
+$text-04: $text-base-size * 1.25;
+$text-05: $text-base-size * 1.5;
+$text-06: $text-base-size * 2;
+$text-07: $text-base-size * 3.75;
+$text-08: $text-base-size * 5;
+$text-scale: (
+  '01': $text-01,
+  '02': $text-02,
+  '03': $text-03,
+  '04': $text-04,
+  '05': $text-05,
+  '06': $text-06,
+  '07': $text-07,
+  '08': $text-08
+);
+
+// line heights
+$line-heights: (
+  'heading-line-height': 1.2,
+  'body-line-height': 1.5
+);
+
+// font weights
+$font-weights: (
+  'light': 300,
+  'normal': 400,
+  'medium': 500,
+  'semibold': 600,
+  'bold': 700
+);
+
+// Element & classes
+h1,
+.fu-text-07 {
+  font-family: var(--font-primary);
+  font-size: var(--text-07);
+  line-height: var(--heading-line-height);
+}
+
+h2,
+.fu-text-06 {
+  font-family: var(--font-primary);
+  font-size: var(--text-06);
+  line-height: var(--heading-line-height);
+}
+
+h3,
+.fu-text-05 {
+  font-family: var(--font-primary);
+  font-size: var(--text-05);
+  line-height: var(--heading-line-height);
+}
+
+h4,
+.fu-text-04 {
+  font-family: var(--font-primary);
+  font-size: var(--text-04);
+  line-height: var(--heading-line-height);
+}
+
+h5,
+.fu-text-03 {
+  font-family: var(--font-primary);
+  font-size: var(--text-03);
+  line-height: var(--heading-line-height);
+}
+
+h6,
+.fu-text-02 {
+  font-family: var(--font-primary);
+  font-size: var(--text-03);
+  line-height: var(--heading-line-height);
+}
+
+p,
+.fu-text-base {
+  color: var(--high-emphasis-text-color);
+  line-height: var(--body-line-height);
+}

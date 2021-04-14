@@ -1,0 +1,12 @@
+//
+// Borders
+//
+
+$ui-border-radius-01: 2px;
+$ui-border-radius-02: 4px;
+$ui-border-radius-03: 8px;
+$ui-border-radius: (
+  'ui-border-radius-01': $ui-border-radius-01,
+  'ui-border-radius-02': $ui-border-radius-02,
+  'ui-border-radius-03': $ui-border-radius-02,
+) !default;

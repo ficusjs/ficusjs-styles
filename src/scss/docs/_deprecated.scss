@@ -1,18 +1,20 @@
+@use '../colors';
+
 .fd-deprecated {
   text-transform: uppercase;
   font-size: x-small;
   padding: 1px 3px;
   background: darkmagenta;
-  color: $white;
+  color: colors.$white;
   font-weight: bold;
   margin-left: 5px;
 }
 
-@if $enable-dark-mode {
-  [data-theme="dark"] {
-    .fd-deprecated {
-      background: magenta;
-      color: $black;
-    }
+
+[data-theme="dark"] {
+  .fd-deprecated {
+    background: magenta;
+    color: colors.$black;
   }
 }
+

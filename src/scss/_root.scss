@@ -1,62 +1,48 @@
-@use 'settings' as *;
+@use 'colors';
+@use 'spacing';
+@use 'typography';
+@use 'ui-elements';
+@use 'themes';
 
 :root {
   // Main colors
-  @each $color, $value in $global-colors {
+  @each $color, $value in colors.$grays {
     --#{$color}-color: #{$value};
   }
-  // State colors
-  @each $state, $value in $state-colors {
-    --state-#{$state}: #{$value};
-  }
   // Spacings
-  @each $spacing, $value in $spacings {
+  @each $spacing, $value in spacing.$spacings {
     --spacing-#{$spacing}: #{$value};
   }
   // Fonts
-  @each $font, $value in $font-families {
+  @each $font, $value in typography.$font-families {
     --font-#{$font}: #{$value};
   }
   // Typography
-  @each $type, $value in $type-scale {
+  @each $type, $value in typography.$text-scale {
     --text-#{$type}: #{$value};
   }
-  // Icons
-  @each $icon, $value in $icons {
-    --icon-#{$icon}: #{$value};
-  }
   // Line heights
-  @each $line-height, $value in $line-heights {
+  @each $line-height, $value in typography.$line-heights {
     --#{$line-height}: #{$value};
   }
-  // UI colors
-  @each $ui-style, $value in $ui-styles {
-    --#{$ui-style}: #{$value};
-  }
-  // UI elevations
-  @each $elevation, $value in $ui-elevations {
-    --#{$elevation}: #{$value};
+  // Icons
+  @each $icon, $value in ui-elements.$icons {
+    --icon-#{$icon}: #{$value};
   }
   // Border radius
-  @each $border-radius, $value in $ui-border-radius {
+  @each $border-radius, $value in ui-elements.$ui-border-radius {
     --#{$border-radius}: #{$value};
   }
 }
 
-// adds custom properties to the `data-theme` attribute
-@if $enable-dark-mode {
-  [data-theme="dark"] {
-    // colors
-    @each $dm-color, $value in $dm-colors {
-      --#{$dm-color}-color: #{$value};
-    }
-    // components
-    @each $dm-ui-style, $value in $dm-ui-styles {
-      --#{$dm-ui-style}: #{$value};
-    }
-    // Elevations
-    @each $dm-elevation, $value in $dm-ui-elevations {
-      --#{$dm-elevation}: #{$value};
+// Themes
+// Adds custom properties to the `data-theme` attribute.
+// ------
+
+@each $theme-name, $theme-values in themes.$themes {
+  html[data-theme="#{$theme-name}"] {
+    @each $section, $color in $theme-values {
+      --#{$section}: #{$color};
     }
   }
 }

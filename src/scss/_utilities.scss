@@ -1,3 +1,8 @@
+@use 'colors';
+@use 'spacing';
+@use 'typography';
+@use 'grid';
+
 @import 'utilities/flow';
 @import 'utilities/wrapper';
 
@@ -12,24 +17,24 @@
 
 $utilities: (
   // colors
-  'bg': (
-    'items': $global-colors,
-    'output': 'standard',
-    'property': 'background'
-  ),
-  'color': (
-    'items': $global-colors,
-    'output': 'standard',
-    'property': 'color'
-  ),
+  // 'bg': (
+  //   'items': colors.$global-colors,
+  //   'output': 'standard',
+  //   'property': 'background'
+  // ),
+  // 'color': (
+  //   'items': colors.$global-colors,
+  //   'output': 'standard',
+  //   'property': 'color'
+  // ),
   // typography
   'font-family': (
-    'items': $font-families,
+    'items': typography.$font-families,
     'output': 'standard',
     'property': 'font-family'
   ),
   'font-weight': (
-    'items': $font-weights,
+    'items': typography.$font-weights,
     'output': 'standard',
     'property': 'font-weight'
   ),
@@ -55,148 +60,148 @@ $utilities: (
   // spacings
   // margin
   'spacing-m': (
-    'items': $spacings,
+    'items': spacing.$spacings,
     'output': 'responsive',
     'property': 'margin-top'
   ),
   'spacing-mt': (
-    'items': $spacings,
+    'items': spacing.$spacings,
     'output': 'responsive',
     'property': 'margin-top'
   ),
   'spacing-mb': (
-    'items': $spacings,
+    'items': spacing.$spacings,
     'output': 'responsive',
     'property': 'margin-bottom'
   ),
   'spacing-ml': (
-    'items': $spacings,
+    'items': spacing.$spacings,
     'output': 'responsive',
     'property': 'margin-left'
   ),
   'spacing-mr': (
-    'items': $spacings,
+    'items': spacing.$spacings,
     'output': 'responsive',
     'property': 'margin-right'
   ),
   // negative margin
   'spacing-n-m': (
-    'items': $negative-spacings,
+    'items': spacing.$negative-spacings,
     'output': 'responsive',
     'property': 'margin-top'
   ),
   'spacing-n-mr': (
-    'items': $negative-spacings,
+    'items': spacing.$negative-spacings,
     'output': 'responsive',
     'property': 'margin-right'
   ),
   'spacing-n-mb': (
-    'items': $negative-spacings,
+    'items': spacing.$negative-spacings,
     'output': 'responsive',
     'property': 'margin-bottom'
   ),
   'spacing-n-ml': (
-    'items': $negative-spacings,
+    'items': spacing.$negative-spacings,
     'output': 'responsive',
     'property': 'margin-left'
   ),
   // padding
   'spacing-p': (
-    'items': $spacings,
+    'items': spacing.$spacings,
     'output': 'responsive',
     'property': 'padding'
   ),
   'spacing-pt': (
-    'items': $spacings,
+    'items': spacing.$spacings,
     'output': 'responsive',
     'property': 'padding-top'
   ),
   'spacing-pr': (
-    'items': $spacings,
+    'items': spacing.$spacings,
     'output': 'responsive',
     'property': 'padding-right'
   ),
   'spacing-pb': (
-    'items': $spacings,
+    'items': spacing.$spacings,
     'output': 'responsive',
     'property': 'padding-bottom'
   ),
   'spacing-pl': (
-    'items': $spacings,
+    'items': spacing.$spacings,
     'output': 'responsive',
     'property': 'padding-left'
   ),
   // layout spacing
   // margin
   'layout-m': (
-    'items': $layouts,
+    'items': spacing.$layouts,
     'output': 'responsive',
     'property': 'margin-top'
   ),
   'layout-mt': (
-    'items': $layouts,
+    'items': spacing.$layouts,
     'output': 'responsive',
     'property': 'margin-top'
   ),
   'layout-mb': (
-    'items': $layouts,
+    'items': spacing.$layouts,
     'output': 'responsive',
     'property': 'margin-bottom'
   ),
   'layout-ml': (
-    'items': $layouts,
+    'items': spacing.$layouts,
     'output': 'responsive',
     'property': 'margin-left'
   ),
   'layout-mr': (
-    'items': $layouts,
+    'items': spacing.$layouts,
     'output': 'responsive',
     'property': 'margin-right'
   ),
   // negative margin
   'layout-n-m': (
-    'items': $negative-layouts,
+    'items': spacing.$negative-layouts,
     'output': 'responsive',
     'property': 'margin-top'
   ),
   'layout-n-mr': (
-    'items': $negative-layouts,
+    'items': spacing.$negative-layouts,
     'output': 'responsive',
     'property': 'margin-right'
   ),
   'layout-n-mb': (
-    'items': $negative-layouts,
+    'items': spacing.$negative-layouts,
     'output': 'responsive',
     'property': 'margin-bottom'
   ),
   'layout-n-ml': (
-    'items': $negative-layouts,
+    'items': spacing.$negative-layouts,
     'output': 'responsive',
     'property': 'margin-left'
   ),
   // padding
   'layout-p': (
-    'items': $layouts,
+    'items': spacing.$layouts,
     'output': 'responsive',
     'property': 'padding'
   ),
   'layout-pt': (
-    'items': $layouts,
+    'items': spacing.$layouts,
     'output': 'responsive',
     'property': 'padding-top'
   ),
   'layout-pr': (
-    'items': $layouts,
+    'items': spacing.$layouts,
     'output': 'responsive',
     'property': 'padding-right'
   ),
   'layout-pb': (
-    'items': $layouts,
+    'items': spacing.$layouts,
     'output': 'responsive',
     'property': 'padding-bottom'
   ),
   'layout-pl': (
-    'items': $layouts,
+    'items': spacing.$layouts,
     'output': 'responsive',
     'property': 'padding-left'
   ),
@@ -222,6 +227,6 @@ $utilities: (
     'property': 'width'
   ),
   'breakpoints': (
-    $breakpoints
+    grid.$breakpoints
   )
 );

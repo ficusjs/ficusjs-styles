@@ -28,6 +28,14 @@ table td {
   margin: 0;
 }
 
+table td::before {
+  clear: both;
+  content: attr(data-label);
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
 table code {
   word-break: normal;
 }
@@ -43,7 +51,7 @@ table code {
   }
 
   table thead {
-    display: block;
+    display: table-header-group;
     background-color: var(--ui-background-02);
   }
 
@@ -75,5 +83,9 @@ table code {
     border-top: 1px solid var(--ui-border-02);
     border-bottom: 1px solid var(--ui-border-02);
     margin: 0;
+  }
+
+  table td::before {
+    display: none;
   }
 }

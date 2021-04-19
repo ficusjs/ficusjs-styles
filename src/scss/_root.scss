@@ -35,14 +35,36 @@
   }
 }
 
+// Prefered color scheme
+// Sets the theme based on system color preference
+// ---------------------
+
+@media (prefers-color-scheme: light) {
+  :root {
+    @each $custom-property, $color in map-get(themes.$themes, light) {
+      --#{$custom-property}: #{$color};
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @each $custom-property, $color in map-get(themes.$themes, dark) {
+      --#{$custom-property}: #{$color};
+    }
+  }
+}
+
 // Themes
 // Adds custom properties to the `data-theme` attribute.
 // ------
 
 @each $theme-name, $theme-values in themes.$themes {
   html[data-theme="#{$theme-name}"] {
-    @each $section, $color in $theme-values {
-      --#{$section}: #{$color};
+    @each $custom-property, $color in $theme-values {
+      --#{$custom-property}: #{$color};
     }
   }
 }
+
+

@@ -2,7 +2,7 @@
   "extends": "stylelint-config-standard",
   "rules": {
     "at-rule-no-unknown": [true, {
-      "ignoreAtRules": ["function", "if", "include", "mixin", "use", "forward", "each", "return", "import"]
+      "ignoreAtRules": ["function", "if", "include", "mixin", "use", "forward", "each", "return", "import", "else". "warn"]
     }]
   }
 }

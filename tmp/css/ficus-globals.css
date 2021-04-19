@@ -88,6 +88,124 @@ p,
   --ui-border-radius-03: 4px;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary-color: #54e4e5;
+    --primary-light-color: tint(#54e4e5, 20%);
+    --primary-dark-color: shade(#54e4e5, 20%);
+    --secondary-color: #63e48b;
+    --secondary-light-color: tint(#63e48b, 20%);
+    --secondary-dark-color: shade(#63e48b, 20%);
+    --body-bg-color: #fff;
+    --body-color: #121212;
+    --high-emphasis-text-color: rgba(18, 18, 18, 0.87);
+    --medium-emphasis-text-color: rgba(18, 18, 18, 0.6);
+    --low-emphasis-text-color: rgba(18, 18, 18, 0.38);
+    --ui-elevation-background-01: #fff;
+    --ui-elevation-background-02: #fff;
+    --ui-elevation-background-03: #fff;
+    --ui-elevation-background-04: #fff;
+    --ui-elevation-background-05: #fff;
+    --ui-elevation-background-06: #fff;
+    --ui-elevation-background-07: #fff;
+    --ui-elevation-background-08: #fff;
+    --ui-elevation-background-09: #fff;
+    --ui-elevation-shadow-01: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    --ui-elevation-shadow-02: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    --ui-elevation-shadow-03: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+    --ui-elevation-shadow-04: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    --ui-elevation-shadow-05: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+    --ui-elevation-shadow-06: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    --ui-elevation-shadow-07: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12);
+    --ui-elevation-shadow-08: 0 8px 10px -5px rgba(0, 0, 0, 0.2), 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12);
+    --ui-elevation-shadow-09: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+    --ui-background: #fff;
+    --ui-background-01: #fafafa;
+    --ui-background-02: #ddd;
+    --ui-background-03: #c0c0c0;
+    --ui-background-04: #a4a4a4;
+    --ui-background-05: #898989;
+    --ui-background-06: #6f6f6f;
+    --ui-background-07: #565656;
+    --ui-background-08: #3e3e3e;
+    --ui-background-09: #272727;
+    --ui-background-10: #121212;
+    --ui-border-01: #fafafa;
+    --ui-border-02: #ddd;
+    --ui-border-03: #c0c0c0;
+    --ui-border-04: #a4a4a4;
+    --ui-border-05: #898989;
+    --ui-border-06: #6f6f6f;
+    --ui-border-07: #565656;
+    --ui-border-08: #3e3e3e;
+    --ui-border-09: #3e3e3e;
+    --ui-border-10: #121212;
+    --ui-color: #000;
+    --required: #fa4d56;
+    --invalid: #fa4d56;
+    --valid: #42be65;
+    --focus: #43b6b7;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #54e4e5;
+    --primary-light-color: tint(#54e4e5, 20%);
+    --primary-dark-color: shade(#54e4e5, 20%);
+    --secondary-color: #63e48b;
+    --secondary-light-color: tint(#63e48b, 20%);
+    --secondary-dark-color: shade(#63e48b, 20%);
+    --body-bg-color: #121212;
+    --body-color: #fff;
+    --high-emphasis-text-color: rgba(255, 255, 255, 0.87);
+    --medium-emphasis-text-color: rgba(255, 255, 255, 0.6);
+    --low-emphasis-text-color: rgba(255, 255, 255, 0.38);
+    --ui-elevation-background-01: #272727;
+    --ui-elevation-background-02: #3e3e3e;
+    --ui-elevation-background-03: #565656;
+    --ui-elevation-background-04: #6f6f6f;
+    --ui-elevation-background-05: #898989;
+    --ui-elevation-background-06: #a4a4a4;
+    --ui-elevation-background-07: #c0c0c0;
+    --ui-elevation-background-08: #ddd;
+    --ui-elevation-background-09: #fafafa;
+    --ui-elevation-shadow-01: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    --ui-elevation-shadow-02: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    --ui-elevation-shadow-03: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+    --ui-elevation-shadow-04: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    --ui-elevation-shadow-05: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+    --ui-elevation-shadow-06: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    --ui-elevation-shadow-07: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12);
+    --ui-elevation-shadow-08: 0 8px 10px -5px rgba(0, 0, 0, 0.2), 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12);
+    --ui-elevation-shadow-09: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+    --ui-background: #121212;
+    --ui-background-01: #272727;
+    --ui-background-02: #3e3e3e;
+    --ui-background-03: #565656;
+    --ui-background-04: #6f6f6f;
+    --ui-background-05: #898989;
+    --ui-background-06: #a4a4a4;
+    --ui-background-07: #c0c0c0;
+    --ui-background-08: #ddd;
+    --ui-background-09: #fafafa;
+    --ui-background-10: #fff;
+    --ui-border-01: #272727;
+    --ui-border-02: #3e3e3e;
+    --ui-border-03: #565656;
+    --ui-border-04: #6f6f6f;
+    --ui-border-05: #898989;
+    --ui-border-06: #a4a4a4;
+    --ui-border-07: #c0c0c0;
+    --ui-border-08: #ddd;
+    --ui-border-09: #fafafa;
+    --ui-border-10: #fff;
+    --ui-color: #fff;
+    --required: #fa4d56;
+    --invalid: #fa4d56;
+    --valid: #42be65;
+    --focus: #43b6b7;
+  }
+}
 html[data-theme=light] {
   --primary-color: #54e4e5;
   --primary-light-color: tint(#54e4e5, 20%);

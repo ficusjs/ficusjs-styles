@@ -2,17 +2,17 @@
 // Themes
 //
 
-@use '../functions';
 @use '../colors';
+@use '../functions';
 
 $themes: (
   light: (
     'primary-color': colors.$primary,
-    'primary-light-color': tint(colors.$primary, 20%),
-    'primary-dark-color': shade(colors.$primary, 20%),
+    'primary-light-color': functions.tint(colors.$primary, 20%),
+    'primary-dark-color': functions.shade(colors.$primary, 20%),
     'secondary-color': colors.$secondary,
-    'secondary-light-color': tint(colors.$secondary, 20%),
-    'secondary-dark-color': shade(colors.$secondary, 20%),
+    'secondary-light-color': functions.tint(colors.$secondary, 20%),
+    'secondary-dark-color': functions.shade(colors.$secondary, 20%),
     'body-bg-color': colors.$white,
     'body-color': colors.$gray-100,
     'high-emphasis-text-color': rgba(colors.$gray-100, 0.87),
@@ -70,11 +70,11 @@ $themes: (
   ),
   dark: (
     'primary-color': colors.$primary,
-    'primary-light-color': tint(colors.$primary, 20%),
-    'primary-dark-color': shade(colors.$primary, 20%),
+    'primary-light-color': functions.tint(colors.$primary, 20%),
+    'primary-dark-color': functions.shade(colors.$primary, 20%),
     'secondary-color': colors.$secondary,
-    'secondary-light-color': tint(colors.$secondary, 20%),
-    'secondary-dark-color': shade(colors.$secondary, 20%),
+    'secondary-light-color': functions.tint(colors.$secondary, 20%),
+    'secondary-dark-color': functions.shade(colors.$secondary, 20%),
     'body-bg-color': colors.$gray-100,
     'body-color': colors.$white,
     'high-emphasis-text-color': rgba(colors.$white, 0.87),

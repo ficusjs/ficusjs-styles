@@ -537,4 +537,18 @@ pre[class*=language-] {
   color: #000;
 }
 
+.fd-logo {
+  position: relative;
+}
+.fd-logo span {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--body-color);
+  text-transform: uppercase;
+}
+
 /*# sourceMappingURL=ficus-docs.css.map */

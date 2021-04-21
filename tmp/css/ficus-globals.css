@@ -90,11 +90,11 @@ p,
 @media (prefers-color-scheme: light) {
   :root {
     --primary-color: #54e4e5;
-    --primary-light-color: tint(#54e4e5, 20%);
-    --primary-dark-color: shade(#54e4e5, 20%);
+    --primary-light-color: #76e9ea;
+    --primary-dark-color: #43b6b7;
     --secondary-color: #63e48b;
-    --secondary-light-color: tint(#63e48b, 20%);
-    --secondary-dark-color: shade(#63e48b, 20%);
+    --secondary-light-color: #82e9a2;
+    --secondary-dark-color: #4fb66f;
     --body-bg-color: #fff;
     --body-color: #121212;
     --high-emphasis-text-color: rgba(18, 18, 18, 0.87);
@@ -149,11 +149,11 @@ p,
 @media (prefers-color-scheme: dark) {
   :root {
     --primary-color: #54e4e5;
-    --primary-light-color: tint(#54e4e5, 20%);
-    --primary-dark-color: shade(#54e4e5, 20%);
+    --primary-light-color: #76e9ea;
+    --primary-dark-color: #43b6b7;
     --secondary-color: #63e48b;
-    --secondary-light-color: tint(#63e48b, 20%);
-    --secondary-dark-color: shade(#63e48b, 20%);
+    --secondary-light-color: #82e9a2;
+    --secondary-dark-color: #4fb66f;
     --body-bg-color: #121212;
     --body-color: #fff;
     --high-emphasis-text-color: rgba(255, 255, 255, 0.87);
@@ -207,11 +207,11 @@ p,
 }
 html[data-theme=light] {
   --primary-color: #54e4e5;
-  --primary-light-color: tint(#54e4e5, 20%);
-  --primary-dark-color: shade(#54e4e5, 20%);
+  --primary-light-color: #76e9ea;
+  --primary-dark-color: #43b6b7;
   --secondary-color: #63e48b;
-  --secondary-light-color: tint(#63e48b, 20%);
-  --secondary-dark-color: shade(#63e48b, 20%);
+  --secondary-light-color: #82e9a2;
+  --secondary-dark-color: #4fb66f;
   --body-bg-color: #fff;
   --body-color: #121212;
   --high-emphasis-text-color: rgba(18, 18, 18, 0.87);
@@ -265,11 +265,11 @@ html[data-theme=light] {
 
 html[data-theme=dark] {
   --primary-color: #54e4e5;
-  --primary-light-color: tint(#54e4e5, 20%);
-  --primary-dark-color: shade(#54e4e5, 20%);
+  --primary-light-color: #76e9ea;
+  --primary-dark-color: #43b6b7;
   --secondary-color: #63e48b;
-  --secondary-light-color: tint(#63e48b, 20%);
-  --secondary-dark-color: shade(#63e48b, 20%);
+  --secondary-light-color: #82e9a2;
+  --secondary-dark-color: #4fb66f;
   --body-bg-color: #121212;
   --body-color: #fff;
   --high-emphasis-text-color: rgba(255, 255, 255, 0.87);

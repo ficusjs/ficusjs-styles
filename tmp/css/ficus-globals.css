@@ -69,8 +69,7 @@ p,
   --spacing-07: 2rem;
   --spacing-08: 2.5rem;
   --spacing-09: 3rem;
-  --font-primary: Raleway, sans-serif;
-  --font-secondary: Open Sans, sans-serif;
+  --font-primary: Saira, sans-serif;
   --text-01: 0.75rem;
   --text-02: 0.875rem;
   --text-03: 1rem;
@@ -363,7 +362,7 @@ body {
   background: var(--body-bg-color);
   color: var(--body-color);
   font-size: var(--text-03);
-  font-family: var(--font-secondary);
+  font-family: var(--font-primary);
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }

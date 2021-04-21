@@ -1,0 +1,14 @@
+.fd-logo {
+  position: relative;
+
+  span {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--body-color);
+    text-transform: uppercase;
+  }
+}

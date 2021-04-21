@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FicusJS Styles</title>
     <base href="/">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600;700&display=swap" rel="stylesheet"> 
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/android-chrome-384x384.png">
@@ -19,7 +19,8 @@
     {% include "../../tmp/css/ficus-globals.css" %}
     {% include "../../tmp/css/ficus-utilities.css" %}
     {% include "../../tmp/css/ficus-docs.css" %}
-    {% include "../../node_modules/@ficusjs/components/dist/components/html/navbar/navbar.css" %}
+    {% include "../../node_modules/@ficusjs/components/dist/components/custom-elements/dropdown/dropdown.css" %}
+    {% include "../../node_modules/@ficusjs/components/dist/components/custom-elements/navbar/navbar.css" %}
     {% include "../../node_modules/@ficusjs/components/dist/components/html/navigation/navigation.css" %}
     {% include "../../node_modules/@ficusjs/components/dist/components/html/button/button.css" %}
     {% endset %}
@@ -34,20 +35,28 @@
   <body>
     <div class="fd-main-layout">
 
-      <header class="fc-navbar">
-        <section class="fc-navbar__section">
-          <img id="ficus-logo" src="../assets/img/ficus-logo.svg" width="150" alt="FicusJS Components">
-          <img id="ficus-logo-white" src="../assets/img/ficus-logo-white.svg" width="150" alt="FicusJS Components" style="display: none;">
-        </section>
-        <section class="fc-navbar__section">
-          <nav class="fc-navbar__nav">
-            <ul>
-              <li><a href="..." class="fc-button fc-button--link">GitHub</a></li>
-              <li>{% include "theme-toggle.njk" %}</li>
-            </ul>
-          </nav>
-        </section>
-      </header>
+      <fc-navbar style="width: 100%;">
+        <svg class="fu-hidden" xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg">
+          <symbol id="menu" viewBox="0 0 48 48">
+            <path d="M 5.5 9 A 1.50015 1.50015 0 1 0 5.5 12 L 42.5 12 A 1.50015 1.50015 0 1 0 42.5 9 L 5.5 9 z M 5.5 22.5 A 1.50015 1.50015 0 1 0 5.5 25.5 L 42.5 25.5 A 1.50015 1.50015 0 1 0 42.5 22.5 L 5.5 22.5 z M 5.5 36 A 1.50015 1.50015 0 1 0 5.5 39 L 42.5 39 A 1.50015 1.50015 0 1 0 42.5 36 L 5.5 36 z"/>
+          </symbol>
+        </svg>
+        <nav class="fd-logo">
+          <img id="ficus-logo" src="/assets/img/ficus-logo.svg" height="32" alt="FicusJS Components">
+          <img id="ficus-logo-white" src="/assets/img/ficus-logo-white.svg" height="32" alt="FicusJS Components" style="display: none;">
+          <span>Styles</span>
+        </nav>
+
+        <button type="button" class="fc-navbar__toggler">
+          <svg>
+            <use xlink:href="#menu" href="#menu"></use>
+          </svg>
+        </button>
+
+        <nav class="fc-navbar__collapse">
+          <a href="https://github.com/ficusjs" class="fc-navbar__link">GitHub</a>
+        </nav>
+      </fc-navbar>
 
       <div class="[ fd-sidebar ] [ fu-spacing-pt-05 fu-spacing-pb-05 fu-spacing-pl-05 fu-spacing-pr-05 fu-lg-spacing-pt-09 fu-lg-spacing-pb-09 fu-lg-spacing-pl-00 fu-lg-spacing-pr-00 ]">
         <details id="sidebar-nav" class="fd-sidebar-details" open>
@@ -73,8 +82,13 @@
         {% endif %} #}
       </main>
 
+      <footer class="[ fd-footer ]">
+        {% include "theme-toggle.njk" %}
+      </footer>
+
     </div>
     <script type="module" src="assets/js/sidebar-details.js"></script>
     <script type="module" src="assets/js/theme.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
   </body>
 </html>

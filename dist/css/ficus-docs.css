@@ -263,7 +263,7 @@ table td::before {
 }
 
 table code {
-  word-break: normal;
+  white-space: nowrap;
 }
 
 @media (min-width: 992px) {
@@ -549,6 +549,10 @@ pre[class*=language-] {
   letter-spacing: 1px;
   color: var(--body-color);
   text-transform: uppercase;
+}
+
+a {
+  color: #43b6b7;
 }
 
 /*# sourceMappingURL=ficus-docs.css.map */

@@ -37,7 +37,7 @@ table td::before {
 }
 
 table code {
-  word-break: normal;
+  white-space: nowrap;
 }
 
 @media (min-width: 992px) {

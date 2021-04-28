@@ -46,26 +46,6 @@
     max-width: 42rem;
   }
 }
-@media (max-width: 992px) {
-  .fd-doc-article h1 {
-    font-size: var(--text-05);
-  }
-  .fd-doc-article h2 {
-    font-size: var(--text-04);
-  }
-  .fd-doc-article h3 {
-    font-size: var(--text-03);
-  }
-  .fd-doc-article h4 {
-    font-size: var(--text-02);
-  }
-  .fd-doc-article h5 {
-    font-size: var(--text-01);
-  }
-  .fd-doc-article h6 {
-    font-size: var(--text-01);
-  }
-}
 
 .fd-doc-layout-toc {
   padding: var(--spacing-05);

@@ -36,15 +36,6 @@
       max-width: 42rem;
     }
   }
-
-  @media (max-width: 992px) {
-    h1 { font-size: var(--text-05); }
-    h2 { font-size: var(--text-04); }
-    h3 { font-size: var(--text-03); }
-    h4 { font-size: var(--text-02); }
-    h5 { font-size: var(--text-01); }
-    h6 { font-size: var(--text-01); }
-  }
 }
 
 .fd-doc-layout-toc {

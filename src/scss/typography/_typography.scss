@@ -2,31 +2,30 @@
 // Typography
 //
 
+@use 'rfs';
+
 // Font families
-$primary-font: 'Saira', sans-serif;
+$primary-font: 'Saira', sans-serif !default;
 $font-families: (
   'primary': $primary-font
 );
 
-// Text scale
-$text-base-size: 1rem;
-$text-01: $text-base-size * 0.75;
-$text-02: $text-base-size * 0.875;
-$text-03: $text-base-size;
-$text-04: $text-base-size * 1.25;
-$text-05: $text-base-size * 1.5;
-$text-06: $text-base-size * 2;
-$text-07: $text-base-size * 3.75;
-$text-08: $text-base-size * 5;
-$text-scale: (
-  '01': $text-01,
-  '02': $text-02,
-  '03': $text-03,
-  '04': $text-04,
-  '05': $text-05,
-  '06': $text-06,
-  '07': $text-07,
-  '08': $text-08
+// Font scale
+$base-font-size: 1rem;
+$h1-font-size: $base-font-size * 3.75 !default;
+$h2-font-size: $base-font-size * 2 !default;
+$h3-font-size: $base-font-size * 1.5 !default;
+$h4-font-size: $base-font-size * 1.25 !default;
+$h5-font-size: $base-font-size !default;
+$h6-font-size: $base-font-size !default;
+$font-size-scale: (
+  'base': $base-font-size,
+  'h1': $h1-font-size,
+  'h2': $h2-font-size,
+  'h3': $h3-font-size,
+  'h4': $h4-font-size,
+  'h5': $h5-font-size,
+  'h6': $h6-font-size
 );
 
 // line heights
@@ -46,45 +45,51 @@ $font-weights: (
 
 // Element & classes
 h1,
-.fu-text-07 {
+.fu-text-h1 {
   font-family: var(--font-primary);
-  font-size: var(--text-07);
   line-height: var(--heading-line-height);
+
+  @include rfs.font-size($h1-font-size);
 }
 
 h2,
-.fu-text-06 {
+.fu-text-h2 {
   font-family: var(--font-primary);
-  font-size: var(--text-06);
   line-height: var(--heading-line-height);
+
+  @include rfs.font-size($h2-font-size);
 }
 
 h3,
-.fu-text-05 {
+.fu-text-h3 {
   font-family: var(--font-primary);
-  font-size: var(--text-05);
   line-height: var(--heading-line-height);
+
+  @include rfs.font-size($h3-font-size);
 }
 
 h4,
-.fu-text-04 {
+.fu-text-h4 {
   font-family: var(--font-primary);
-  font-size: var(--text-04);
   line-height: var(--heading-line-height);
+
+  @include rfs.font-size($h4-font-size);
 }
 
 h5,
-.fu-text-03 {
+.fu-text-h5 {
   font-family: var(--font-primary);
-  font-size: var(--text-03);
   line-height: var(--heading-line-height);
+
+  @include rfs.font-size($h5-font-size);
 }
 
 h6,
-.fu-text-02 {
+.fu-text-h6 {
   font-family: var(--font-primary);
-  font-size: var(--text-03);
   line-height: var(--heading-line-height);
+
+  @include rfs.font-size($h6-font-size);
 }
 
 p,

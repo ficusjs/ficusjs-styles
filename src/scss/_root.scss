@@ -18,8 +18,8 @@
     --font-#{$font}: #{$value};
   }
   // Typography
-  @each $type, $value in typography.$text-scale {
-    --text-#{$type}: #{$value};
+  @each $size, $value in typography.$font-size-scale {
+    --#{$size}-font-size: #{$value};
   }
   // Line heights
   @each $line-height, $value in typography.$line-heights {
@@ -66,5 +66,3 @@
     }
   }
 }
-
-

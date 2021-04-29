@@ -94,7 +94,7 @@
     display: inline-block;
     text-decoration: none;
     padding: calc(var(--text-04) / 4) 0;
-    color: var(--gray-70-color);
+    color: var(--gray-50-color);
   }
 
   .fd-sticky-aside {
@@ -127,7 +127,7 @@
   width: 100%;
   list-style: none;
 }
-.fd-sidebar-details > summary::-webkit-details-marker {
+.fd-sidebar-details > summary::marker {
   display: none;
 }
 

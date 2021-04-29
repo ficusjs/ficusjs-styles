@@ -1,43 +1,61 @@
 h1,
-.fu-text-07 {
+.fu-text-h1 {
   font-family: var(--font-primary);
-  font-size: var(--text-07);
   line-height: var(--heading-line-height);
+  font-size: calc(1.5rem + 3vw);
 }
 
+@media (min-width: 1200px) {
+  h1,
+.fu-text-h1 {
+    font-size: 3.75rem;
+  }
+}
 h2,
-.fu-text-06 {
+.fu-text-h2 {
   font-family: var(--font-primary);
-  font-size: var(--text-06);
   line-height: var(--heading-line-height);
+  font-size: calc(1.325rem + 0.9vw);
 }
 
+@media (min-width: 1200px) {
+  h2,
+.fu-text-h2 {
+    font-size: 2rem;
+  }
+}
 h3,
-.fu-text-05 {
+.fu-text-h3 {
   font-family: var(--font-primary);
-  font-size: var(--text-05);
   line-height: var(--heading-line-height);
+  font-size: calc(1.275rem + 0.3vw);
 }
 
+@media (min-width: 1200px) {
+  h3,
+.fu-text-h3 {
+    font-size: 1.5rem;
+  }
+}
 h4,
-.fu-text-04 {
+.fu-text-h4 {
   font-family: var(--font-primary);
-  font-size: var(--text-04);
   line-height: var(--heading-line-height);
+  font-size: 1.25rem;
 }
 
 h5,
-.fu-text-03 {
+.fu-text-h5 {
   font-family: var(--font-primary);
-  font-size: var(--text-03);
   line-height: var(--heading-line-height);
+  font-size: 1rem;
 }
 
 h6,
-.fu-text-02 {
+.fu-text-h6 {
   font-family: var(--font-primary);
-  font-size: var(--text-03);
   line-height: var(--heading-line-height);
+  font-size: 1rem;
 }
 
 p,

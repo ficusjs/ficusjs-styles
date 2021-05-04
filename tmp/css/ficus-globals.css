@@ -338,21 +338,18 @@ html[data-theme=dark] {
   --state-focus: #43b6b7;
 }
 
-/* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Remove default padding, remove list styles on ul, ol elements with a class attribute */
 ul[class],
 ol[class] {
   padding: 0;
   list-style: none;
 }
 
-/* Remove default margin */
 body,
 h1,
 h2,
@@ -368,12 +365,10 @@ dd {
   margin: 0;
 }
 
-/* Set core root defaults */
 html {
   scroll-behavior: smooth;
 }
 
-/* Set core body defaults */
 body {
   min-height: 100vh;
   background: var(--body-bg-color);
@@ -384,24 +379,20 @@ body {
   line-height: var(--body-line-height);
 }
 
-/* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-/* Make images easier to work with */
 img,
 picture {
   max-width: 100%;
   display: block;
 }
 
-/* Natural flow and rhythm in articles by default */
 article > * + * {
   margin-top: 1em;
 }
 
-/* Inherit fonts for inputs and buttons */
 input,
 button,
 textarea,
@@ -409,12 +400,10 @@ select {
   font: inherit;
 }
 
-/* Blur images when they have no alt attribute */
 img:not([alt]) {
   filter: blur(10px);
 }
 
-/* The Thematic Break (Horizontal Rule) element styles */
 hr {
   border-top: 1px solid var(--ui-border-02);
   margin: 0;
@@ -423,7 +412,6 @@ hr {
   border-bottom-width: 0;
 }
 
-/* Code elements that don't have a class get default styles */
 code:not([class]) {
   word-break: break-word;
   hyphens: manual;
@@ -434,7 +422,6 @@ code:not([class]) {
   padding-right: calc(var(--spacing-05) / 2);
 }
 
-/* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

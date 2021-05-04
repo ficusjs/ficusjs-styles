@@ -186,6 +186,7 @@ a[href].fd-direct-link:visited {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  flex-direction: column;
   margin-top: var(--spacing-07);
   border: 1px solid var(--ui-border-02);
   border-top-left-radius: var(--ui-border-radius-01);

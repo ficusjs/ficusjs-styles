@@ -20,10 +20,10 @@ $themes: (
     'low-emphasis-text-color': rgba(colors.$gray-100, 0.38),
     // UI Elevations
     'ui-elevation-background-01': colors.$white,
-    'ui-elevation-background-02': colors.$white,
-    'ui-elevation-background-03': colors.$white,
-    'ui-elevation-background-04': colors.$white,
-    'ui-elevation-background-05': colors.$white,
+    'ui-elevation-background-02': colors.$gray-10,
+    'ui-elevation-background-03': colors.$gray-20,
+    'ui-elevation-background-04': colors.$gray-30,
+    'ui-elevation-background-05': colors.$gray-40,
     'ui-elevation-background-06': colors.$white,
     'ui-elevation-background-07': colors.$white,
     'ui-elevation-background-08': colors.$white,
@@ -63,10 +63,10 @@ $themes: (
     'ui-color': colors.$black,
     // States
     // TODO: Update HEX Values with member from the colors module.
-    'required': #fa4d56,
-    'invalid':  #fa4d56,
-    'valid': #42be65,
-    'focus': functions.shade(colors.$primary, 20%),
+    'state-required': #fa4d56,
+    'state-invalid':  #fa4d56,
+    'state-valid': #42be65,
+    'state-focus': functions.shade(colors.$primary, 20%),
   ),
   dark: (
     'primary-color': colors.$primary,
@@ -125,9 +125,9 @@ $themes: (
     'ui-color': colors.$white,
     // States
     // TODO: Update HEX Values with member from the colors module.
-    'required': #fa4d56,
-    'invalid':  #fa4d56,
-    'valid': #42be65,
-    'focus': functions.shade(colors.$primary, 20%),
+    'state-required': #fa4d56,
+    'state-invalid':  #fa4d56,
+    'state-valid': #42be65,
+    'state-focus': functions.shade(colors.$primary, 20%),
   )
 );

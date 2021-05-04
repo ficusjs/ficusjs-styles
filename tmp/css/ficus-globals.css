@@ -1,6 +1,7 @@
 h1,
 .fu-text-h1 {
   font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
   line-height: var(--heading-line-height);
   font-size: calc(1.5rem + 3vw);
 }
@@ -14,6 +15,7 @@ h1,
 h2,
 .fu-text-h2 {
   font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
   line-height: var(--heading-line-height);
   font-size: calc(1.325rem + 0.9vw);
 }
@@ -27,6 +29,7 @@ h2,
 h3,
 .fu-text-h3 {
   font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
   line-height: var(--heading-line-height);
   font-size: calc(1.275rem + 0.3vw);
 }
@@ -40,6 +43,7 @@ h3,
 h4,
 .fu-text-h4 {
   font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
   line-height: var(--heading-line-height);
   font-size: 1.25rem;
 }
@@ -47,6 +51,7 @@ h4,
 h5,
 .fu-text-h5 {
   font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
   line-height: var(--heading-line-height);
   font-size: 1rem;
 }
@@ -54,6 +59,7 @@ h5,
 h6,
 .fu-text-h6 {
   font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
   line-height: var(--heading-line-height);
   font-size: 1rem;
 }
@@ -88,6 +94,11 @@ p,
   --spacing-08: 2.5rem;
   --spacing-09: 3rem;
   --font-primary: Saira, sans-serif;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
   --base-font-size: 1rem;
   --h1-font-size: 3.75rem;
   --h2-font-size: 2rem;

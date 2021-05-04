@@ -17,6 +17,10 @@
   @each $font, $value in typography.$font-families {
     --font-#{$font}: #{$value};
   }
+  // Font weights
+  @each $weight, $value in typography.$font-weights {
+    --font-weight-#{$weight}: #{$value};
+  }
   // Typography
   @each $size, $value in typography.$font-size-scale {
     --#{$size}-font-size: #{$value};

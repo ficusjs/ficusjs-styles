@@ -35,18 +35,24 @@ $line-heights: (
 );
 
 // font weights
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-bold: 700 !default;
 $font-weights: (
-  'light': 300,
-  'normal': 400,
-  'medium': 500,
-  'semibold': 600,
-  'bold': 700
+  'light': $font-weight-light,
+  'normal': $font-weight-normal,
+  'medium': $font-weight-medium,
+  'semibold': $font-weight-semibold,
+  'bold': $font-weight-bold
 );
 
 // Element & classes
 h1,
 .fu-text-h1 {
   font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
   line-height: var(--heading-line-height);
 
   @include rfs.font-size($h1-font-size);
@@ -55,6 +61,7 @@ h1,
 h2,
 .fu-text-h2 {
   font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
   line-height: var(--heading-line-height);
 
   @include rfs.font-size($h2-font-size);
@@ -63,6 +70,7 @@ h2,
 h3,
 .fu-text-h3 {
   font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
   line-height: var(--heading-line-height);
 
   @include rfs.font-size($h3-font-size);
@@ -71,6 +79,7 @@ h3,
 h4,
 .fu-text-h4 {
   font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
   line-height: var(--heading-line-height);
 
   @include rfs.font-size($h4-font-size);
@@ -79,6 +88,7 @@ h4,
 h5,
 .fu-text-h5 {
   font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
   line-height: var(--heading-line-height);
 
   @include rfs.font-size($h5-font-size);
@@ -87,6 +97,7 @@ h5,
 h6,
 .fu-text-h6 {
   font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
   line-height: var(--heading-line-height);
 
   @include rfs.font-size($h6-font-size);

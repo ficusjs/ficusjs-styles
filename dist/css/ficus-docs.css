@@ -536,4 +536,12 @@ a {
   color: #43b6b7;
 }
 
+.fd-page-links {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--ui-border-02);
+  margin-top: 3rem;
+}
+
 /*# sourceMappingURL=ficus-docs.css.map */

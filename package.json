@@ -1,6 +1,6 @@
 {
   "name": "@ficusjs/styles",
-  "version": "1.0.0-alpha.27",
+  "version": "1.0.0-alpha.28",
   "description": "Global styles for FicusJS",
   "main": "dist/loader/index.js",
   "module": "dist/loader/index.js",

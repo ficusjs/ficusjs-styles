@@ -41,6 +41,9 @@
 .fd-doc-article table {
   --flow-space: var(--spacing-07);
 }
+.fd-doc-article code {
+  white-space: nowrap;
+}
 @media (min-width: 992px) {
   .fd-doc-article > :not(pre):not(table):not(.fd-component-container):not(.fd-page-links):not(hr) {
     max-width: 42rem;

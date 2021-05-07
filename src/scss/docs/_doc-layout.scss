@@ -31,6 +31,10 @@
     --flow-space: var(--spacing-07);
   }
 
+  code {
+    white-space: nowrap;
+  }
+
   @media (min-width: 992px) {
     & > :not(pre):not(table):not(.fd-component-container):not(.fd-page-links):not(hr) {
       max-width: 42rem;

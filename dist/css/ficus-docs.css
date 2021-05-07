@@ -42,7 +42,7 @@
   --flow-space: var(--spacing-07);
 }
 @media (min-width: 992px) {
-  .fd-doc-article > :not(pre):not(table):not(.fd-component-container):not(hr) {
+  .fd-doc-article > :not(pre):not(table):not(.fd-component-container):not(.fd-page-links):not(hr) {
     max-width: 42rem;
   }
 }

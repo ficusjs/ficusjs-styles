@@ -32,7 +32,7 @@
   }
 
   @media (min-width: 992px) {
-    & > :not(pre):not(table):not(.fd-component-container):not(hr) {
+    & > :not(pre):not(table):not(.fd-component-container):not(.fd-page-links):not(hr) {
       max-width: 42rem;
     }
   }

@@ -1,11 +1,11 @@
+@use 'themes';
 @use 'colors';
 @use 'spacing';
 @use 'typography';
-@use 'ui-elements';
-@use 'themes';
+@use 'ui';
 
 :root {
-  // Main colors
+  // Colors
   @each $color, $value in colors.$grays {
     --#{$color}-color: #{$value};
   }
@@ -30,43 +30,11 @@
     --#{$line-height}: #{$value};
   }
   // Icons
-  @each $icon, $value in ui-elements.$icons {
+  @each $icon, $value in ui.$icons {
     --icon-#{$icon}: #{$value};
   }
   // Border radius
-  @each $border-radius, $value in ui-elements.$ui-border-radius {
+  @each $border-radius, $value in ui.$ui-border-radius {
     --#{$border-radius}: #{$value};
-  }
-}
-
-// Prefered color scheme
-// Sets the theme based on system color preference
-// ---------------------
-
-@media (prefers-color-scheme: light) {
-  :root {
-    @each $custom-property, $color in map-get(themes.$themes, light) {
-      --#{$custom-property}: #{$color};
-    }
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    @each $custom-property, $color in map-get(themes.$themes, dark) {
-      --#{$custom-property}: #{$color};
-    }
-  }
-}
-
-// Themes
-// Adds custom properties to the `data-theme` attribute.
-// ------
-
-@each $theme-name, $theme-values in themes.$themes {
-  html[data-theme="#{$theme-name}"] {
-    @each $custom-property, $color in $theme-values {
-      --#{$custom-property}: #{$color};
-    }
   }
 }

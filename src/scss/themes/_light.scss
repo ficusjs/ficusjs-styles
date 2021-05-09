@@ -1,0 +1,71 @@
+// Light theme
+// -----------
+
+@use '../colors';
+@use '../functions';
+@use 'mixins';
+
+@include mixins.theme(
+  $name: light,
+  $prefers-color-scheme: true,
+  $primary-color: colors.$primary,
+  $primary-light-color: functions.tint(colors.$primary, 20%),
+  $primary-dark-color: functions.shade(colors.$primary, 20%),
+  $secondary-color: colors.$secondary,
+  $secondary-light-color: functions.tint(colors.$secondary, 20%),
+  $secondary-dark-color: functions.shade(colors.$secondary, 20%),
+  $body-bg-color: colors.$white,
+  $body-color: colors.$gray-100,
+  $high-emphasis-text-color: rgba(colors.$gray-100, 0.87),
+  $medium-emphasis-text-color: rgba(colors.$gray-100, 0.6),
+  $low-emphasis-text-color: rgba(colors.$gray-100, 0.38),
+  // UI Elevations
+  $ui-elevation-background-01: colors.$white,
+  $ui-elevation-background-02: colors.$gray-10,
+  $ui-elevation-background-03: colors.$gray-20,
+  $ui-elevation-background-04: colors.$gray-30,
+  $ui-elevation-background-05: colors.$gray-40,
+  $ui-elevation-background-06: colors.$white,
+  $ui-elevation-background-07: colors.$white,
+  $ui-elevation-background-08: colors.$white,
+  $ui-elevation-background-09: colors.$white,
+  $ui-elevation-shadow-01: (0 2px 1px -1px rgba(colors.$black, 0.2),0 1px 1px 0 rgba(colors.$black, 0.14),0 1px 3px 0 rgba(colors.$black, 0.12)),
+  $ui-elevation-shadow-02: (0 3px 1px -2px rgba(colors.$black, 0.2),0 2px 2px 0 rgba(colors.$black, 0.14),0 1px 5px 0 rgba(colors.$black, 0.12)),
+  $ui-elevation-shadow-03: (0 3px 3px -2px rgba(colors.$black, 0.2),0 3px 4px 0 rgba(colors.$black, 0.14),0 1px 8px 0 rgba(colors.$black, 0.12)),
+  $ui-elevation-shadow-04: (0 2px 4px -1px rgba(colors.$black, 0.2),0 4px 5px 0 rgba(colors.$black, 0.14),0 1px 10px 0 rgba(colors.$black, 0.12)),
+  $ui-elevation-shadow-05: (0 3px 5px -1px rgba(colors.$black, 0.2),0 6px 10px 0 rgba(colors.$black, 0.14),0 1px 18px 0 rgba(colors.$black, 0.12)),
+  $ui-elevation-shadow-06: (0 5px 5px -3px rgba(colors.$black, 0.2),0 8px 10px 1px rgba(colors.$black, 0.14),0 3px 14px 2px rgba(colors.$black, 0.12)),
+  $ui-elevation-shadow-07: (0 7px 8px -4px rgba(colors.$black, 0.2),0 12px 17px 2px rgba(colors.$black, 0.14),0 5px 22px 4px rgba(colors.$black, 0.12)),
+  $ui-elevation-shadow-08: (0 8px 10px -5px rgba(colors.$black, 0.2),0 16px 24px 2px rgba(colors.$black, 0.14),0 6px 30px 5px rgba(colors.$black, 0.12)),
+  $ui-elevation-shadow-09: (0 11px 15px -7px rgba(colors.$black, 0.2),0 24px 38px 3px rgba(colors.$black, 0.14),0 9px 46px 8px rgba(colors.$black, 0.12)),
+  // UI Backgrounds
+  $ui-background: colors.$white,
+  $ui-background-01: colors.$gray-10,
+  $ui-background-02: colors.$gray-20,
+  $ui-background-03: colors.$gray-30,
+  $ui-background-04: colors.$gray-40,
+  $ui-background-05: colors.$gray-50,
+  $ui-background-06: colors.$gray-60,
+  $ui-background-07: colors.$gray-70,
+  $ui-background-08: colors.$gray-80,
+  $ui-background-09: colors.$gray-90,
+  $ui-background-10: colors.$gray-100,
+  // UI Borders
+  $ui-border-01: colors.$gray-10,
+  $ui-border-02: colors.$gray-20,
+  $ui-border-03: colors.$gray-30,
+  $ui-border-04: colors.$gray-40,
+  $ui-border-05: colors.$gray-50,
+  $ui-border-06: colors.$gray-60,
+  $ui-border-07: colors.$gray-70,
+  $ui-border-08: colors.$gray-80,
+  $ui-border-09: colors.$gray-80,
+  $ui-border-10: colors.$gray-100,
+  $ui-color: colors.$black,
+  // States
+  // TODO: Update HEX Values with member from the colors module.
+  $state-required: #fa4d56,
+  $state-invalid:  #fa4d56,
+  $state-valid: #42be65,
+  $state-focus: functions.shade(colors.$primary, 20%),
+);

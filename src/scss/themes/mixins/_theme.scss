@@ -1,0 +1,35 @@
+// Theme
+// A mixin that loops through each argument and creates a custom property
+// against the set data theme attribute value or prefers-color-scheme.
+// -----
+
+@use "sass:meta";
+
+@mixin theme($name: null, $prefers-color-scheme: false, $args...) {
+  @if $name and $prefers-color-scheme == true {
+    // Theme
+    // Adds custom properties to the `data-theme` attribute
+    html[data-theme="#{$name}"] {
+      @each $custom-property, $color in meta.keywords($args) {
+        --#{$custom-property}: #{$color};
+      }
+    }
+    // Prefered color scheme
+    // Sets the theme based on system color preference
+    @media (prefers-color-scheme: $name) {
+      :root {
+        @each $custom-property, $color in meta.keywords($args) {
+          --#{$custom-property}: #{$color};
+        }
+      }
+    }
+  } @else if $name {
+    // Theme
+    // Adds custom properties to the `data-theme` attribute
+    html[data-theme="#{$name}"] {
+      @each $custom-property, $color in meta.keywords($args) {
+        --#{$custom-property}: #{$color};
+      }
+    }
+  }
+}
